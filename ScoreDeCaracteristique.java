@@ -1,18 +1,19 @@
-public class ScoreDeCaracteristique {
-    private final int valeur;
-
-    public ScoreDeCaracteristique(int valeur) {
-        if (valeur < 3 || valeur > 18) {
-            throw new IllegalArgumentException("La valeur doit être comprise entre 3 et 18 inclus");
+public ScoreDeCaracteristique(Caracteristique caracteristique, int value) {
+        if (value < 1 || value > 20) {
+        throw new IllegalArgumentException("La valeur de la caractéristique doit être comprise entre 1 et 20 inclus.");
         }
-        this.valeur = valeur;
-    }
+        this.caracteristique = caracteristique;
+        this.value = value;
+        }
 
-    public int val() {
-        return valeur;
-    }
+public int val() {
+        return value;
+        }
 
-    public int mod() {
-        return (valeur - 10) / 2;
-    }
-}
+public int mod() {
+        return (value - 10) / 2;
+        }
+
+public Caracteristique getCaracteristique() {
+        return caracteristique;
+        }
